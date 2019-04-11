@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout_top_number_verify"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_phone"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:src="@drawable/ic_phone" />
+
+        <TextView
+            android:id="@+id/tv_enter_mobile_number"
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_phone"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/mobile_num_txt"
+            android:textColor="#ff000000"
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_send_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_enter_mobile_number"
+            android:layout_alignLeft="@id/tv_enter_mobile_number"
+            android:layout_marginLeft="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:layout_marginRight="@dimen/_6sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/roboto_light"
+            android:gravity="center"
+            android:text="@string/tv_send_code"
+            android:textColor="#ff000000" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_et_phone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_below="@id/layout_top_number_verify"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/background_mobile_number_field"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_number_code"
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_50sdp"
+            android:text="+91" />
+
+        <EditText
+            android:id="@+id/et_phone_num"
+             android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_marginRight="@dimen/_8sdp"
+            android:layout_toRightOf="@id/tv_number_code"
+            android:layout_toEndOf="@id/tv_number_code"
+            android:background="@android:color/transparent"
+            android:inputType="phone"
+             android:maxLength="10"
+             android:textSize="@dimen/_13ssp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_get_verification_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/light_blue"
+        android:text="@string/get_verification_code"
+         android:textColor="#ffffffff" />
+
+    <com.agrawalsuneet.dotsloader.loaders.TashieLoader
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:tashieloader_animDelay="200"
+        app:tashieloader_animDur="100"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        app:tashieloader_dotsColor="@color/light_blue"
+        app:tashieloader_dotsDist="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_20sdp"
+        app:tashieloader_dotsRadius="5dp"
+        app:tashieloader_interpolator="@android:anim/accelerate_interpolator"
+        app:tashieloader_noOfDots="4" />
+
+
+
+</RelativeLayout>

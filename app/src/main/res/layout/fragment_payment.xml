@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/_20sdp"
+    android:paddingTop="@dimen/_20sdp">
+
+
+    <TextView
+        android:id="@+id/tv_collect_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/collect_amount_request"
+        android:textSize="@dimen/_14ssp"/>
+
+    <Button
+        android:id="@+id/btn_send_pay_rqst"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:text="@string/send_pay_request"
+        android:textSize="@dimen/_8ssp"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_alignTop="@id/tv_collect_amount"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_toRightOf="@id/tv_collect_amount"
+          android:background="@drawable/btn_background_submit"
+        android:layout_marginLeft="@dimen/_20sdp" />
+
+
+    <com.agrawalsuneet.dotsloader.loaders.TashieLoader
+        android:id="@+id/progress_send_pay_request"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:tashieloader_animDelay="200"
+        app:tashieloader_animDur="100"
+        android:visibility="visible"
+        android:layout_marginTop="@dimen/_9sdp"
+        app:tashieloader_dotsColor="@color/light_blue"
+        app:tashieloader_dotsDist="5dp"
+        app:tashieloader_dotsRadius="5dp"
+        android:layout_marginStart="@dimen/_40sdp"
+        android:layout_alignTop="@id/tv_collect_amount"
+        android:layout_toRightOf="@id/tv_collect_amount"
+        app:tashieloader_interpolator="@android:anim/accelerate_interpolator"
+        app:tashieloader_noOfDots="4" />
+
+
+
+
+
+    <TextView
+        android:id="@+id/payonline_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pay_online"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_below="@id/tv_collect_amount"
+        />
+
+    <TextView
+        android:id="@+id/c_id_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/payonline_label"
+        android:text="Customer Id"
+        android:textSize="@dimen/_14ssp"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+    <TextView
+        android:id="@+id/tv_c_id"
+        android:layout_width="@dimen/_170sdp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:text="AIR 83832"
+        android:paddingStart="@dimen/_5sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_toRightOf="@id/payee_name_lbl"
+        android:layout_marginStart="@dimen/_80sdp"
+        android:layout_marginEnd="@dimen/_14sdp"
+         android:textSize="@dimen/_12ssp"
+        android:layout_alignTop="@id/c_id_lbl"/>
+
+    <TextView
+        android:id="@+id/lbl_billing_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/c_id_lbl"
+        android:text="Billing Date"
+        android:textSize="@dimen/_14ssp"
+        android:layout_marginTop="@dimen/_8sdp"/>
+
+    <TextView
+        android:id="@+id/tv_billing_date"
+        android:layout_width="@dimen/_170sdp"
+        android:layout_height="wrap_content"
+         android:inputType="number"
+        android:text="01/01/2015"
+        android:paddingStart="@dimen/_5sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_toRightOf="@id/payee_name_lbl"
+        android:layout_marginStart="@dimen/_80sdp"
+        android:layout_marginEnd="@dimen/_14sdp"
+        android:layout_below="@id/payonline_label"
+        android:textSize="@dimen/_12ssp"
+        android:layout_alignTop="@id/lbl_billing_date"/>
+
+    <TextView
+        android:id="@+id/lbl_due_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lbl_billing_date"
+        android:text="Due Date"
+        android:textSize="@dimen/_14ssp"
+        android:layout_marginTop="@dimen/_8sdp"/>
+
+    <TextView
+        android:id="@+id/tv_due_date"
+        android:layout_width="@dimen/_170sdp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:text="01/01/2015"
+        android:paddingStart="@dimen/_5sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_toRightOf="@id/payee_name_lbl"
+        android:layout_marginStart="@dimen/_80sdp"
+        android:layout_marginEnd="@dimen/_14sdp"
+        android:layout_below="@id/payonline_label"
+        android:textSize="@dimen/_12ssp"
+        android:layout_alignTop="@id/lbl_due_date"/>
+
+    <TextView
+        android:id="@+id/outstanding_amount_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Outstanding Amount :"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_below="@id/lbl_due_date"
+        android:textSize="@dimen/_14ssp"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+    <EditText
+        android:id="@+id/et_outstanding_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter amount"
+        android:inputType="number"
+        android:paddingStart="@dimen/_5sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_toRightOf="@id/payee_name_lbl"
+        android:layout_marginStart="@dimen/_80sdp"
+        android:layout_marginEnd="@dimen/_14sdp"
+         android:layout_below="@id/payonline_label"
+        android:textSize="@dimen/_12ssp"
+        android:layout_alignTop="@id/outstanding_amount_lbl"/>
+
+
+    <TextView
+        android:id="@+id/bill_date_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Due date is over"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_below="@id/outstanding_amount_lbl"
+        android:textSize="@dimen/_10ssp"
+        android:visibility="gone"
+        android:layout_marginStart="@dimen/_3sdp"
+         android:layout_alignStart="@id/et_outstanding_amount"
+        android:layout_marginTop="@dimen/_8sdp"/>
+
+    <TextView
+        android:id="@+id/payee_name_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/payee_name"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_below="@id/outstanding_amount_lbl"
+        android:textSize="@dimen/_14ssp"
+        android:layout_marginTop="@dimen/_25sdp"/>
+
+    <EditText
+        android:id="@+id/tv_payee_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:fontFamily="@font/roboto_regular"
+        android:hint="Name"
+        android:maxLines="1"
+
+        android:layout_alignTop="@id/payee_name_lbl"
+         android:layout_alignStart="@id/et_outstanding_amount"
+         android:textSize="@dimen/_14ssp"
+        android:layout_alignLeft="@id/et_outstanding_amount" />
+
+
+    <Button
+        android:id="@+id/btn_pay"
+        android:layout_width="@dimen/_170sdp"
+        android:layout_height="@dimen/_32sdp"
+        android:text="@string/pay"
+        android:layout_below="@id/tv_payee_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:background="@drawable/btn_background_submit"/>
+
+
+    <com.agrawalsuneet.dotsloader.loaders.TashieLoader
+        android:id="@+id/progress_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:tashieloader_animDelay="200"
+        app:tashieloader_animDur="100"
+        android:visibility="visible"
+         app:tashieloader_dotsColor="@color/light_blue"
+        app:tashieloader_dotsDist="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tv_payee_name"
+        android:layout_marginTop="@dimen/_50sdp"
+        app:tashieloader_dotsRadius="5dp"
+         app:tashieloader_interpolator="@android:anim/accelerate_interpolator"
+        app:tashieloader_noOfDots="4" />
+
+
+    <RelativeLayout
+        android:id="@+id/last_payment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_40sdp"
+        android:paddingEnd="@dimen/_20sdp"
+        >
+
+        <View
+            android:id="@+id/horizontal_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:background="#d3d3d3"
+            />
+
+        <TextView
+            android:id="@+id/tv_last_bill_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24/02/2018"
+            android:fontFamily="@font/roboto_regular"
+
+            android:layout_alignParentEnd="true"
+             android:layout_marginTop="@dimen/_15sdp"
+            android:layout_below="@id/horizontal_bar"
+            android:textSize="@dimen/_12ssp"/>
+
+        <TextView
+            android:id="@+id/last_bill_date_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last bill date: "
+            android:fontFamily="@font/roboto_regular"
+
+            android:layout_alignTop="@id/tv_last_bill_date"
+            android:layout_below="@id/horizontal_bar"
+            android:textSize="@dimen/_14ssp"/>
+
+        <TextView
+            android:id="@+id/last_bill_amount_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last bill Paid Amount: "
+            android:fontFamily="@font/roboto_regular"
+
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_below="@id/last_bill_date_lbl"
+            android:textSize="@dimen/_14ssp"/>
+
+        <TextView
+            android:id="@+id/tv_last_bill_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/tv_last_bill_date"
+            android:text="500"
+
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_below="@id/last_bill_date_lbl"
+            android:textSize="@dimen/_14ssp"/>
+
+        <TextView
+            android:id="@+id/txn_id_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order ID "
+            android:fontFamily="@font/roboto_regular"
+
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_below="@id/last_bill_amount_lbl"
+            android:textSize="@dimen/_14ssp"/>
+
+
+        <TextView
+            android:id="@+id/txn_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3323XSDA"
+
+            android:fontFamily="@font/roboto_regular"
+            android:layout_alignStart="@id/tv_last_bill_amount"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_below="@id/last_bill_amount_lbl"
+            android:textSize="@dimen/_12ssp"/>
+
+        <TextView
+            android:id="@+id/txn_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_below="@id/txn_id_lbl"
+            android:textSize="@dimen/_14ssp"/>
+
+        <TextView
+            android:id="@+id/txn_status_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3323XSDA"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_alignStart="@id/tv_last_bill_amount"
+             android:layout_alignTop="@id/txn_status"
+             android:textSize="@dimen/_12ssp"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

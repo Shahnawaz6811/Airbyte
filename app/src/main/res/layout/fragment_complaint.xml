@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     android:paddingTop="@dimen/_20sdp">
+
+    <TextView
+        android:id="@+id/complaint_label"
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/complaint"
+        android:textColor="#ff000000"
+        android:textSize="@dimen/_17ssp" />
+
+    <TextView
+        android:id="@+id/problem_label"
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/complaint_spinner"
+        android:layout_marginTop="@dimen/_35sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:text="@string/problem"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:textSize="@dimen/_15ssp" />
+
+    <com.jaredrummler.materialspinner.MaterialSpinner
+        android:id="@+id/complaint_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:layout_toEndOf="@id/problem_label"
+        android:layout_below="@id/complaint_label"
+        android:layout_marginTop="@dimen/_35sdp" />
+
+    <RelativeLayout
+        android:id="@+id/other_complaint_layout"
+         android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/problem_label"
+        android:layout_below="@id/problem_label"
+        android:layout_marginTop="@dimen/_15sdp">
+
+        <TextView
+            android:id="@+id/if_other"
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_marginTop="@dimen/_15sdp"
+            android:text="If Other :"
+            android:textSize="@dimen/_15ssp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv"
+             android:layout_width="fill_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_toEndOf="@id/if_other"
+            android:layout_marginStart="@dimen/_13sdp"
+            android:layout_alignTop="@id/if_other">
+
+            <EditText
+                android:id="@+id/et_other_complaint"
+                 android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:background="@drawable/etback"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="top"
+                android:hint="Enter your complaint here"
+                android:paddingTop="@dimen/_3sdp"
+                android:textSize="@dimen/_13ssp" />
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+         android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_32sdp"
+        android:layout_below="@id/other_complaint_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:background="@drawable/btn_background_submit"
+        android:clickable="true"
+        android:foreground="?selectableItemBackground"
+        android:text="Submit"
+        android:textColor="#ffffffff" />
+
+    <com.agrawalsuneet.dotsloader.loaders.TashieLoader
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:tashieloader_animDelay="200"
+        app:tashieloader_animDur="100"
+        android:visibility="visible"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_37sdp"
+        android:layout_below="@id/other_complaint_layout"
+        app:tashieloader_dotsColor="@color/light_blue"
+        app:tashieloader_dotsDist="5dp"
+         android:layout_marginBottom="@dimen/_20sdp"
+        app:tashieloader_dotsRadius="5dp"
+        app:tashieloader_interpolator="@android:anim/accelerate_interpolator"
+        app:tashieloader_noOfDots="4" />
+</RelativeLayout>

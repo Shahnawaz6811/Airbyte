@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="popup_width">@dimen/_310sdp</dimen>
+    <dimen name="popup_height">@dimen/_275sdp</dimen>
+    <dimen name="customer_dialog_height">@dimen/_365sdp</dimen>
+    <dimen name="select_customer_dialog_height">@dimen/_435sdp</dimen>
+
+
+</resources>

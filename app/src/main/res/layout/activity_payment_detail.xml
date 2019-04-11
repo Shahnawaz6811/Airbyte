@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".customer.payment.PaymentDetailActivity">
+
+    <ImageButton
+        android:id="@+id/ib_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_clear_black_24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/_20sdp"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_alignParentRight="true"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_45sdp"
+        >
+
+
+
+        <TextView
+            android:id="@+id/payment_status_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_17ssp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:textColor="#000"
+            android:text="Payment Successful"/>
+
+        <ImageView
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_toEndOf="@id/payment_status_label"
+            android:src="@drawable/ic_success"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_alignTop="@id/payment_status_label"/>
+
+
+        <TextView
+            android:id="@+id/tv_payee_name_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone: "
+            android:layout_below="@id/payment_status_label"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:textSize="@dimen/_14ssp"/>
+
+        <TextView
+            android:id="@+id/tv_payee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shahnawaz"
+            android:layout_alignStart="@id/tv_amount"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@id/tv_payee_name_lbl"
+            android:textSize="@dimen/_14ssp"/>
+
+        <TextView
+            android:id="@+id/last_bill_amount_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amount: "
+            android:layout_below="@id/tv_payee_name_lbl"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textSize="@dimen/_14ssp"/>
+
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="500"
+            android:layout_toRightOf="@id/tv_payee_name_lbl"
+            android:layout_marginStart="@dimen/_80sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_alignTop="@id/last_bill_amount_lbl"
+            android:textSize="@dimen/_14ssp"/>
+
+        <TextView
+            android:id="@+id/txn_id_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order ID "
+            android:layout_below="@id/tv_date"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textSize="@dimen/_14ssp"/>
+
+
+        <TextView
+            android:id="@+id/txn_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3323XSDA"
+            android:layout_below="@id/tv_date"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_alignTop="@id/txn_id_lbl"
+            android:layout_alignStart="@id/tv_amount"
+            android:textSize="@dimen/_12ssp"/>
+
+        <TextView
+            android:id="@+id/last_bill_date_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date: "
+            android:layout_below="@id/tv_amount"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textSize="@dimen/_14ssp"/>
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24/02/2018"
+            android:layout_alignStart="@id/txn_id"
+            android:layout_alignTop="@id/last_bill_date_lbl"
+            android:layout_alignParentEnd="true"
+            android:textSize="@dimen/_12ssp"/>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

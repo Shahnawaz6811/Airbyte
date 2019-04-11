@@ -1,0 +1,126 @@
+<androidx.cardview.widget.CardView xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_220sdp"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+      app:cardBackgroundColor="#ffffff"
+    app:cardUseCompatPadding="true"
+
+     tools:context=".admin.AddUserFragment">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingBottom="@dimen/_10sdp"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+     tools:context=".admin.AddUserFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ImageButton
+        android:id="@+id/ib_dismiss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="@android:color/transparent"
+        android:src="@drawable/ic_clear_black_24dp"/>
+
+    <EditText
+        android:id="@+id/et_customer_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Customer id"
+        android:fontFamily="@font/roboto_regular"
+        android:textSize="@dimen/_14ssp"
+        android:paddingStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        />
+
+    <EditText
+        android:id="@+id/et_customer_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_customer_id"
+        android:hint="Customer name"
+        android:fontFamily="@font/roboto_regular"
+        android:textSize="@dimen/_14ssp"
+        android:paddingStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        />
+
+    <EditText
+        android:id="@+id/et_customer_phone1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_customer_name"
+        android:hint="Customer phone1"
+        android:fontFamily="@font/roboto_regular"
+        android:textSize="@dimen/_14ssp"
+        android:inputType="phone"
+
+        android:paddingStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        />
+
+    <EditText
+        android:id="@+id/et_customer_phone2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_customer_phone1"
+        android:hint="Customer phone2"
+        android:fontFamily="@font/roboto_regular"
+        android:textSize="@dimen/_14ssp"
+        android:inputType="phone"
+
+        android:paddingStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        />
+
+    <EditText
+        android:id="@+id/et_customer_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_customer_phone2"
+        android:hint="Customer address"
+        android:maxLines="3"
+        android:fontFamily="@font/roboto_regular"
+        android:textSize="@dimen/_14ssp"
+        android:paddingStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        />
+
+    <Button
+        android:id="@+id/btn_update_customer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_customer_address"
+        android:hint="Update"
+        android:maxLines="3"
+        android:textColor="#fff"
+        android:textSize="@dimen/_14ssp"
+        android:background="@drawable/btn_background_submit"
+        android:paddingStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_35sdp"
+        />
+
+    <com.agrawalsuneet.dotsloader.loaders.TashieLoader
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:tashieloader_animDelay="200"
+        app:tashieloader_animDur="100"
+        android:visibility="visible"
+        android:layout_marginTop="@dimen/_49sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/et_customer_address"
+        app:tashieloader_dotsColor="@color/light_blue"
+        app:tashieloader_dotsDist="5dp"
+        app:tashieloader_dotsRadius="5dp"
+        app:tashieloader_interpolator="@android:anim/accelerate_interpolator"
+        app:tashieloader_noOfDots="4" />
+
+
+
+</RelativeLayout>
+</androidx.cardview.widget.CardView>

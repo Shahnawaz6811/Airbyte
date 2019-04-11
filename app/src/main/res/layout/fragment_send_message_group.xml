@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".admin.SendMessageGroupFragment">
+
+
+    <com.jaredrummler.materialspinner.MaterialSpinner
+        android:id="@+id/spinner_groups"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="wrap_content"
+        android:text="Select Group"
+        android:layout_below="@id/send_customer_notification"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_40sdp"
+        />
+
+
+    <com.jaredrummler.materialspinner.MaterialSpinner
+        android:id="@+id/spinner_templates"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_below="@id/spinner_groups"
+        android:textSize="@dimen/_10ssp"
+        android:text="Select template"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_centerHorizontal="true"
+        />
+
+
+    <EditText
+        android:id="@+id/et_message"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:hint="Enter message here"
+        android:gravity="top"
+        android:paddingStart="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        android:paddingTop="@dimen/_8sdp"
+        android:background="@drawable/background_message_box"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/roboto_regular"
+         android:layout_below="@id/spinner_templates"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/btn_send_message"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_below="@id/et_message"
+        android:layout_centerHorizontal="true"
+        android:clickable="false"
+        android:alpha="0.3"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:text="Send"
+        android:background="@drawable/btn_background_submit"/>
+
+    <com.agrawalsuneet.dotsloader.loaders.TashieLoader
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:tashieloader_animDelay="200"
+        app:tashieloader_animDur="100"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/_35sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/et_message"
+        app:tashieloader_dotsColor="@color/light_blue"
+        app:tashieloader_dotsDist="5dp"
+        app:tashieloader_dotsRadius="5dp"
+        app:tashieloader_interpolator="@android:anim/accelerate_interpolator"
+        app:tashieloader_noOfDots="4" />
+
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_below="@id/btn_send_message"
+        />
+
+    <TextView
+        android:id="@+id/tv_progress_txt"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="#00000000"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:textSize="@dimen/_12ssp"
+        android:layout_centerHorizontal="true"
+        android:text="Fetching customers..."
+        android:layout_below="@id/pb"
+        />
+
+</RelativeLayout>

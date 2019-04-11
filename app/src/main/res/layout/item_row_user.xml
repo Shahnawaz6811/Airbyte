@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/root_layout"
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+
+        app:cardUseCompatPadding="true"
+        app:cardPreventCornerOverlap="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_3sdp"
+            android:paddingStart="@dimen/_4sdp"
+            android:paddingLeft="@dimen/_4sdp"
+            >
+
+            <TextView
+                android:id="@+id/tv_customer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shahn"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/_14ssp"
+                />
+
+            <TextView
+                android:id="@+id/tv_customer_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="@dimen/_13ssp"
+                 android:layout_centerVertical="true"
+                android:layout_centerInParent="true" />
+
+            <TextView
+                android:id="@+id/tv_customer_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:textSize="@dimen/_13ssp"
+                android:layout_alignParentEnd="true"
+                 android:layout_centerInParent="true"/>
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

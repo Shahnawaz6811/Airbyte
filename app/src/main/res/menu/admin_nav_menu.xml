@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/complaint" android:id="@+id/item_complaint" android:title="Complaint" />
+    <item android:icon="@drawable/online_payment" android:id="@+id/item_payment" android:title="Payment" />
+    <item android:icon="@drawable/ic_person_add_black_24dp" android:id="@+id/item_add_user" android:title="Add New Customer" />
+    <item android:icon="@drawable/ic_person_add_black_24dp" android:id="@+id/item_add_worker" android:title="Add New Worker" />
+    <item android:icon="@drawable/ic_group_add_black_24dp" android:id="@+id/item_add_group" android:title="Add New Group" />
+    <item android:icon="@drawable/ic_group_black_24dp" android:id="@+id/item_manage_group" android:title="Manage Group" />
+    <item android:icon="@drawable/ic_msg" android:id="@+id/item_send_message" android:title="Notification" />
+    <item android:icon="@drawable/ic_msg" android:id="@+id/item_template" android:title="Template" />
+     <item android:icon="@drawable/signout" android:id="@+id/signout" android:title="Sign Out" />
+</menu>

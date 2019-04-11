@@ -1,0 +1,137 @@
+<androidx.cardview.widget.CardView xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_220sdp"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+      app:cardBackgroundColor="#ffffff"
+    app:cardUseCompatPadding="true"
+
+     tools:context=".admin.AddUserFragment">
+
+    <ImageButton
+        android:id="@+id/ib_dismiss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+         android:backgroundTint="@android:color/transparent"
+        android:src="@drawable/ic_clear_black_24dp"/>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:padding="@dimen/_15sdp"
+        android:paddingEnd="@dimen/_25sdp"
+        tools:context=".admin.AddUserFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+
+
+
+        <TextView
+            android:id="@+id/tv_complaint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/_15ssp"
+            android:layout_below="@id/ib_dismiss"
+            android:fontFamily="@font/roboto_regular"
+             android:text="Internet not working"
+            />
+
+        <TextView
+            android:id="@+id/lbl_complaint_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_15ssp"
+            android:fontFamily="@font/coresansar"
+
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_below="@id/tv_complaint"
+            android:text="Complaint Id"/>
+
+        <TextView
+            android:id="@+id/tv_complaint_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="@font/roboto_regular"
+
+            android:layout_alignTop="@id/lbl_complaint_id"
+            android:text="323"/>
+
+        <TextView
+            android:id="@+id/lbl_customer_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_15ssp"
+            android:fontFamily="@font/coresansar"
+
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_below="@id/lbl_complaint_id"
+            android:text="Customer Id"/>
+
+        <TextView
+            android:id="@+id/tv_customer_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_13ssp"
+            android:fontFamily="@font/roboto_regular"
+
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@id/lbl_customer_id"
+            android:text="AIR 5434"/>
+
+        <TextView
+            android:id="@+id/lbl_customer_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_15ssp"
+            android:fontFamily="@font/coresansar"
+
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_below="@id/lbl_customer_id"
+            android:text="Phone"/>
+
+        <TextView
+            android:id="@+id/tv_customer_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_13ssp"
+            android:fontFamily="@font/roboto_regular"
+
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@id/lbl_customer_phone"
+            android:text="8882068724"/>
+
+
+        <TextView
+            android:id="@+id/lbl_complaint_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_15ssp"
+            android:fontFamily="@font/coresansar"
+
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_below="@id/lbl_customer_phone"
+            android:text="Time"/>
+
+        <TextView
+            android:id="@+id/tv_complaint_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_13ssp"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@id/lbl_complaint_time"
+            android:text="12:40 PM, 12/02"/>
+
+
+
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
