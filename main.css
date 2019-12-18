@@ -5,6 +5,14 @@
     background-color: pink;
 }
 
+
+.main2 {
+    max-width: 100px;
+    color: aquamarine;
+    font-size: 44px;
+    background-color: yellow;
+}
+
 .main .child {
    float: left;
    margin: 23px 24px 0 0;
