@@ -1,0 +1,11 @@
+.main {
+    max-width: 1200px;
+    color: aquamarine;
+    font-size: 23px;
+}
+
+
+.main .child {
+   float: left;
+   margin: 23px 24px 0 0;
+}
