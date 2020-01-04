@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/complaint" android:id="@+id/item_complaint" android:title="Complaint" />
+    <item android:icon="@drawable/online_payment" android:id="@+id/item_payment" android:title="Payment" />
+    <item android:icon="@drawable/ic_contact_mail_black_24dp" android:id="@+id/contact_us" android:title="Contact Us" />
+     <item android:icon="@drawable/signout" android:id="@+id/signout" android:title="Sign Out" />
+</menu>

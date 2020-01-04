@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="@dimen/_15sdp"
+    android:paddingStart="@dimen/_20sdp"
+    android:paddingEnd="@dimen/_20sdp"
+    tools:context=".admin.AddUserFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <EditText
+        android:id="@+id/et_customer_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:hint="Customer id"
+        android:textSize="@dimen/_14ssp"
+
+        android:paddingStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        />
+
+    <EditText
+        android:id="@+id/et_customer_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_customer_id"
+        android:hint="Customer name"
+        android:textSize="@dimen/_14ssp"
+        android:paddingStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        />
+
+    <EditText
+        android:id="@+id/et_customer_phone1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_customer_name"
+        android:hint="Customer phone1"
+        android:textSize="@dimen/_14ssp"
+        android:inputType="phone"
+        android:maxLength="10"
+
+        android:paddingStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        />
+
+    <EditText
+        android:id="@+id/et_customer_phone2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_customer_phone1"
+        android:hint="Customer phone2"
+        android:textSize="@dimen/_14ssp"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:paddingStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        />
+
+    <EditText
+        android:id="@+id/et_customer_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_customer_phone2"
+        android:hint="Customer address"
+        android:maxLines="3"
+        android:textSize="@dimen/_14ssp"
+        android:paddingStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        />
+
+    <Button
+        android:id="@+id/btn_add_customer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_32sdp"
+        android:layout_below="@id/et_customer_address"
+        android:hint="Add Customer"
+        android:maxLines="3"
+        android:textColor="#fff"
+        android:textSize="@dimen/_14ssp"
+        android:background="@drawable/btn_background_submit"
+        android:paddingStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_35sdp"
+        />
+
+    <com.agrawalsuneet.dotsloader.loaders.TashieLoader
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:tashieloader_animDelay="200"
+        app:tashieloader_animDur="100"
+        android:visibility="visible"
+        android:layout_marginTop="@dimen/_49sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/et_customer_address"
+         app:tashieloader_dotsColor="@color/light_blue"
+        app:tashieloader_dotsDist="5dp"
+         app:tashieloader_dotsRadius="5dp"
+        app:tashieloader_interpolator="@android:anim/accelerate_interpolator"
+        app:tashieloader_noOfDots="4" />
+
+
+
+</RelativeLayout>

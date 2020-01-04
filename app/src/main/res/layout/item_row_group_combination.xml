@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_48sdp"
+          app:cardUseCompatPadding="true"
+        app:cardPreventCornerOverlap="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+             android:paddingStart="@dimen/_4sdp"
+            >
+
+            <TextView
+                android:id="@+id/tv_customer_name"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:textSize="@dimen/_13ssp"
+                 android:text="Shahn"/>
+
+            <TextView
+                android:id="@+id/tv_customer_id"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/tv_customer_name"
+                  android:fontFamily="@font/roboto_regular"
+                android:textSize="@dimen/_12ssp"
+                android:text="AIR 8882"/>
+
+            <TextView
+                android:id="@+id/tv_group_name"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_customer_id"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="@dimen/_12ssp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:text="LAN"/>
+
+
+            <ImageButton
+                android:id="@+id/ib_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/ic_delete_black_24dp"
+                />
+
+            <ProgressBar
+                android:id="@+id/pb"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:visibility="gone"
+                android:layout_centerInParent="true"/>
+
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

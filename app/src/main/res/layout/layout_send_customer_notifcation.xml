@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_20sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:id="@+id/tv_customer_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_marginTop="@dimen/_20sdp"
+        android:textSize="@dimen/_15ssp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/customer_id" />
+
+    <EditText
+        android:id="@+id/et_customer_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_40sdp"
+         android:layout_marginLeft="@dimen/_50sdp"
+        android:textSize="@dimen/_12ssp"
+        android:editable="false"
+        android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_toRightOf="@id/tv_customer_id"
+        android:hint="Select customer"
+        android:inputType="none" />
+
+    <TextView
+        android:id="@+id/tv_lbl_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/tv_customer_id"
+        android:layout_below="@id/tv_customer_id"
+         android:textSize="@dimen/_15ssp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/roboto_regular"
+
+        android:text="Phone"/>
+
+    <EditText
+        android:id="@+id/tv_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:layout_toRightOf="@id/tv_lbl_phone"
+        android:layout_alignStart="@id/et_customer_id"
+        android:layout_below="@id/tv_customer_id"
+        android:fontFamily="@font/roboto_regular"
+        android:textSize="@dimen/_12ssp"
+        android:layout_alignTop="@id/tv_lbl_phone"
+         android:text=""/>
+
+
+    <TextView
+        android:id="@+id/tv_lbl_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/tv_lbl_name"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:text="Customer Name"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_below="@id/tv_lbl_phone"
+        android:textSize="@dimen/_15ssp"/>
+
+    <EditText
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_25sdp"
+         android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_alignBottom="@id/tv_lbl_name"
+        android:layout_alignStart="@id/tv_phone"
+          />
+
+
+
+    <com.jaredrummler.materialspinner.MaterialSpinner
+        android:id="@+id/spinner_templates"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+         android:layout_below="@id/tv_name"
+        android:textSize="@dimen/_10ssp"
+        android:text="Select template"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_35sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_centerHorizontal="true"
+         />
+
+    <EditText
+        android:id="@+id/et_templates"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:textSize="@dimen/_12ssp"
+         android:layout_marginStart="@dimen/_30sdp"
+        android:gravity="top"
+        android:background="@drawable/background_message_box"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:fontFamily="@font/roboto_regular"
+         android:layout_below="@id/spinner_templates"
+        android:paddingStart="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        android:paddingTop="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:hint="Edit template here"/>
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_32sdp"
+         android:background="@drawable/btn_background_submit"
+        android:text="Send"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_below="@id/et_templates"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:layout_centerHorizontal="true"
+          />
+
+    <com.agrawalsuneet.dotsloader.loaders.TashieLoader
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:tashieloader_animDelay="200"
+        app:tashieloader_animDur="100"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/et_templates"
+        app:tashieloader_dotsColor="@color/light_blue"
+        app:tashieloader_dotsDist="5dp"
+        app:tashieloader_dotsRadius="5dp"
+        app:tashieloader_interpolator="@android:anim/accelerate_interpolator"
+        app:tashieloader_noOfDots="4" />
+
+
+
+</RelativeLayout>

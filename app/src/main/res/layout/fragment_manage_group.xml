@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".admin.ManageGroupFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_20sdp"
+        android:text="@string/hello_blank_fragment">
+        
+        <com.jaredrummler.materialspinner.MaterialSpinner
+            android:id="@+id/spinner_groups"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            />
+
+        <EditText
+            android:id="@+id/et_customer_name"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:hint="Select customer"
+            android:editable="false"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:paddingStart="@dimen/_6sdp"
+            android:layout_below="@id/spinner_groups"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:id="@+id/btn_add_group"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_below="@id/et_customer_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="Add"
+            android:background="@drawable/btn_background_submit"/>
+
+        <com.agrawalsuneet.dotsloader.loaders.TashieLoader
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:tashieloader_animDelay="200"
+            app:tashieloader_animDur="100"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/et_customer_name"
+            app:tashieloader_dotsColor="@color/light_blue"
+            app:tashieloader_dotsDist="5dp"
+            app:tashieloader_dotsRadius="5dp"
+            app:tashieloader_interpolator="@android:anim/accelerate_interpolator"
+            app:tashieloader_noOfDots="4" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/workers_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Groups"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:textStyle="bold"
+        android:textSize="@dimen/_14ssp"
+        android:layout_below="@id/layout_top"
+         />
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_group"
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/groups_lbl"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_below="@id/workers_lbl"
+       />
+
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:visibility="visible"
+        android:layout_marginBottom="@dimen/_90sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
+
+
+</RelativeLayout>

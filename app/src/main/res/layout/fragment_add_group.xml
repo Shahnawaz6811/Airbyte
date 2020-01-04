@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".admin.AddGroupFragment">
+
+
+
+    <EditText
+        android:id="@+id/et_group_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:hint="Group name"
+        android:maxLines="3"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:textSize="@dimen/_14ssp"
+        android:layout_centerHorizontal="true"
+        android:paddingStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_45sdp"
+        />
+
+    <Button
+        android:id="@+id/btn_add_group"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:layout_below="@id/et_group_name"
+        android:hint="Add Group"
+         android:textColor="#fff"
+        android:textSize="@dimen/_14ssp"
+        android:background="@drawable/btn_background_submit"
+        android:paddingStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        />
+
+    <com.agrawalsuneet.dotsloader.loaders.TashieLoader
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:tashieloader_animDelay="200"
+        app:tashieloader_animDur="100"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/_42sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/et_group_name"
+        app:tashieloader_dotsColor="@color/light_blue"
+        app:tashieloader_dotsDist="5dp"
+        app:tashieloader_dotsRadius="5dp"
+        app:tashieloader_interpolator="@android:anim/accelerate_interpolator"
+        app:tashieloader_noOfDots="4" />
+
+    <TextView
+        android:id="@+id/groups_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Groups"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:textStyle="bold"
+        android:textSize="@dimen/_18sdp"
+        android:layout_below="@id/et_group_name"
+        android:layout_marginTop="@dimen/_90sdp"
+        />
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_group"
+        android:layout_width="match_parent"
+         android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/groups_lbl"
+         android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_below="@id/groups_lbl"/>
+
+
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/_90sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
+
+
+</RelativeLayout>

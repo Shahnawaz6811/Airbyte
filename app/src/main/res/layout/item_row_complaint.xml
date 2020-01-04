@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+          app:cardUseCompatPadding="true"
+        app:cardPreventCornerOverlap="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_3sdp"
+            android:paddingStart="@dimen/_10sdp"
+            >
+
+            <TextView
+                android:id="@+id/tv_complaint_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:textSize="@dimen/_15ssp"
+                 android:text="2"/>
+
+
+            <TextView
+                android:id="@+id/tv_customer_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_centerInParent="true"
+                 android:textSize="@dimen/_15ssp"
+                android:text="AIR88820"/>
+
+
+            <TextView
+                android:id="@+id/tv_complaint_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="49348389434"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_alignParentEnd="true"
+                android:textSize="@dimen/_14ssp"
+                android:layout_centerInParent="true"/>
+
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+     android:layout_marginEnd="@dimen/_4sdp"
+    android:padding="@dimen/_10sdp"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+            <TextView
+                android:id="@+id/tv_customer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/_15ssp"
+                 android:text="Shahn"/>
+
+            <TextView
+                android:id="@+id/tv_customer_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8882067243"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="@dimen/_13ssp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:layout_toStartOf="@id/rb_customer"
+                 android:layout_centerVertical="true"
+                 />
+
+            <RadioButton
+                android:id="@+id/rb_customer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:textSize="@dimen/_15ssp"
+                android:checked="false"
+                android:layout_alignParentEnd="true"
+                 />
+
+
+
+        </RelativeLayout>
+
+
+
+
